@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import NavbarContent from "../components/NavbarContent";
 import DonationContent from "../components/DonationContent.jsx";
-import landingPage from '../json/landingPage.json';
 import SearchBar from '../components/SearchBar';
 
+
 class Donasi extends Component {
+
     render() {
+
         return (
             <>
-                <SearchBar/>
+                <SearchBar />
                 <NavbarContent {...this.props}></NavbarContent>
                 <div className="container mt-3 mb-4">
                     <div className="row">
@@ -55,9 +57,9 @@ class Donasi extends Component {
                     </div>
                 </div>
 
-                <DonationContent data={landingPage.categories} />
+                <DonationContent />
 
-
+                
                 <div className="container mt-2">
                     <div className="row ">
                         <div className="col ">
@@ -66,7 +68,8 @@ class Donasi extends Component {
                                     <li class="page-item"><a class="page-link" href="#">Sebelumnya</a></li>
                                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li c
+lass="page-item"><a class="page-link" href="#">3</a></li>
                                     <li class="page-item"><a class="page-link" href="#">Selanjutnya</a></li>
                                 </ul>
                             </nav>

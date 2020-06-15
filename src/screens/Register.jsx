@@ -129,32 +129,24 @@ const Register = () => {
                           <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
                             <label className="form-check-label " for="defaultCheck1">
                               Dengan mendaftar, kamu setuju dengan <span>Syarat dan Ketentuan</span> ketjilbergerak
-                            </label>     
+                            </label>  
+                            <div className="or text-center">
+                  <p style={{position:"relative", right:"15px"}} className="ATAU my-4">ATAU</p>
+                </div>
+
+                <div className='flex flex-col '>
+                <a
+                      style={{position:"relative", right:"50px",}}
+                      className='button-masuk '
+                      href='/login'
+                    >
+                      <span  style={{fontFamily:"Poppins", position:"relative", left:"155px", top:"20px"}} className='ml-3 text-center text-masuk'>Login</span>
+                    </a>           
+                </div>   
                         </div>
                       </div>
                     </div>    
                   </form>
-                <div className="or text-center">
-                  <p className="ATAU my-4">ATAU</p>
-                </div>
-               <div className='flex flex-col '>
-                  <GoogleLogin
-                    clientId={`975168813576-b86dnkjbdji4cvctnj7esm0ogvj40v81.apps.googleusercontent.com`}
-                    onSuccess={responseGoogle}
-                    onFailure={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                    render={renderProps => (
-                  <button
-                    onClick={renderProps.onClick}
-                    disabled={renderProps.disabled}
-                    className='form-control Rectangle-1'
-                  >
-                    <i className='fab fa-google ' />
-                      <span className="">Masuk dengan Google</span>
-                  </button>
-                  )}
-                ></GoogleLogin>             
-                </div>              
               </div>
             </div>
           </div>

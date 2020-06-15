@@ -56,10 +56,10 @@ const Activate = ({ match }) => {
         <div className='lg:w-1/2 xl:w-5/12 p-6 sm:p-12'>
           <div className='mt-12 flex flex-col items-center'>
           
-          <img className="Group-1"  img alt="logo" src={logo}/>
+          <img className="Group-1" img alt="logo" src={logo}/>
           <div class="">
-          <img className="Group-1 mt-3" img alt="verificon" style={{position:"relative", left:"85px"}} src={verificon}/>
-            <h1 className='text-2xl xl:text-3xl font-extrabold'>
+          <img className="Group-1 mt-3 mb-3" style={{position:"relative", right:"20px"}} img alt="verificon" style={{position:"relative", left:"85px"}} src={verificon}/>
+            <h1 className='text-2xl xl:text-3xl font-extrabold' style={{fontFamily:"Poppins", fontSize:"26px"}}>
               Akun anda telah terverifikasi
             </h1>
 
@@ -69,7 +69,7 @@ const Activate = ({ match }) => {
             >
               <div className='mx-auto max-w-xs relative '>
                 <button 
-                  style={{backgroundColor:"red"}}
+                  style={{backgroundColor:"red",fontFamily:"Poppins"}}
                   type='submit'
                   className='mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
                 >
@@ -77,7 +77,7 @@ const Activate = ({ match }) => {
                 </button>
               </div>
               <div className='my-12 border-b text-center'>
-                <div className='leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2'>
+                <div  style={{fontFamily:"Poppins"}} className='leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2'>
                   Login or Sign Up again
                 </div>
               </div>
@@ -88,7 +88,7 @@ const Activate = ({ match }) => {
                   href='/login'
                   target='_self'
                 >
-                  <span className='ml-4'>Sign in</span>
+                  <span style={{fontFamily:"Poppins"}} className=''>Sign in</span>
                 </a>
                 <a
                   className='w-full max-w-xs font-bold shadow-sm rounded-lg py-3
@@ -96,7 +96,7 @@ const Activate = ({ match }) => {
                   href='/register'
                   target='_self'
                 >
-                    <span className='ml-4'>Sign Up</span>
+                    <span style={{fontFamily:"Poppins"}} className=''>Sign Up</span>
                 </a>
               </div>
             </form>

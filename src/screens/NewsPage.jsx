@@ -1,14 +1,30 @@
 import React, { Component } from 'react';
 import NavbarContent from "../components/NavbarContent";
 import NewsContent from "../components/NewsContent.jsx";
-import landingPage from '../json/landingPage.json';
 import SearchBar from "../components/SearchBar";
 
-export default class NewsPage extends Component {
+
+class NewsPage extends Component {
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         news: []
+    //     }
+    // }
+
+    // componentDidMount() {
+    //     axios.get('http://165.22.100.70:8040/tim5/b/berita').then(res => {
+    //         this.setState({ news: res.data.news })
+    //         console.log(res.data)
+    //     });
+    // }
+
+
     render() {
         return (
             <>
-                <SearchBar/>
+                <SearchBar />
                 <NavbarContent {...this.props}></NavbarContent>
 
                 {/* shorter */}
@@ -31,7 +47,8 @@ export default class NewsPage extends Component {
 
 
                 {/* News content */}
-                <NewsContent data={landingPage.categories} />
+
+                <NewsContent />
 
 
                 {/* pagination */}
@@ -56,3 +73,5 @@ export default class NewsPage extends Component {
         )
     }
 }
+
+export default NewsPage;

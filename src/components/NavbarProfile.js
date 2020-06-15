@@ -25,16 +25,16 @@ export default function NavbarProfile(props) {
 
                                 <div className="category-content">
                                     <ul id="menu-nav" className="nav flex-column">
-                                        <li className={`nav-item-profile${getNavLinkClass("/profile/editprofile")}`}>
-                                            <a href="/profile/editprofile" className="nav-link">
+                                        <li className={`nav-item-profile${getNavLinkClass("/profile/profile")}`}>
+                                            <a href="/profile/profile" className="nav-link">
                                                 <i class="fas fx fa-user-alt"></i> Profile</a>
                                         </li>
                                         <li className={`nav-item-profile${getNavLinkClass("/profile/historydonation")}`}>
                                             <a href="/profile/historydonation" className="nav-link">
                                                 <i class="fas fx fa-history"></i> Histori donasi</a>
                                         </li>
-                                        <li className={`nav-item-profile${getNavLinkClass("/profile/Reset")}`}>
-                                            <a href="/profile/Reset" className="nav-link active">
+                                        <li className={`nav-item-profile${getNavLinkClass("/users/password/reset/:token")}`}>
+                                            <a href="/users/password/reset/:token" className="nav-link active">
                                                 <i class="fas fx fa-lock"></i> Ganti Password</a>
                                         </li>
                                         <li>

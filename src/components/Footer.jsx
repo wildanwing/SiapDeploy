@@ -28,9 +28,9 @@ class Footer extends React.Component {
                         <div className="col-6"  >
                             <h6 className="mt-2">Ikuti Update Kami</h6>
                             <ul class="social-network px-2">
-                                <li><a href="#" class="btn-twitter" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" class="btn-facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                                <li><a href="#" class="btn-instagram" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/ketjilbergerak" class="btn-twitter" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/ketjilbergerak/" class="btn-facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.instagram.com/ketjilbergerak/?hl=id" class="btn-instagram" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>

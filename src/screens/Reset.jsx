@@ -1,43 +1,99 @@
-import React, { Component, useState } from 'react';
-import NavbarProfile from "../components/NavbarProfile";
-import landingPage from '../json/landingPage.json';
+import React, { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
 
-export default class Reset extends Component {
-
-    render() {
-        //const [selectedDate, setSelectedDate] = useState(null);
-        return (
-            <>
-                <div class="container container-profile mt-5 mb-5" >
-                    <div className="row ">
-                        <NavbarProfile {...this.props} />
-                        <div className="col-sm-9">
-                            <h4 className="mt-4" style={{ color: '#f43b31' }}>Ganti Password</h4>
-                            <p className="reset-text text-center">Masukkan alamat e-mail anda dan kami akan <br/>mengirimkan link untuk mengganti password</p>
-                            <form
-                      
-                    className='' style={{position:'relative', bottom:'20px'}}
-                    // onSubmit={handleSubmit}
-                  >
-                    <input 
-                      className='form-control mt-20 Rectangle-forget'
-                      type='email'
-                      placeholder='Email'
-                      // onChange={handleChange('email')}
-                      // value={email}
-                     />
-      <button
-                      type='Submit'
-                      className='button-forget mt-10'
-                    >
-                      <span className='ml-3 text-masuk'>Kirim</span>
-                    </button>
-      </form>
-                        </div>
-                    </div>
-                </div>
-
-            </>
-        )
+const Reset = ({match}) => {
+  const [formData, setFormData] = useState({
+      password1: '',
+      password2: '',
+      token: '',
+    textChange: 'Submit'
+  });
+    const { password1, password2, textChange, token } = formData;
+    
+    useEffect(() => {
+        let token = match.params.token
+        if(token) {
+            setFormData({...formData, token,})
+        }
+        
+    }, [])
+  const handleChange = text => e => {
+    setFormData({ ...formData, [text]: e.target.value });
+  };
+    const handleSubmit = e => {
+      console.log(password1, password2)
+    e.preventDefault();
+    if ((password1 === password2) && password1 && password2) {
+      setFormData({ ...formData, textChange: 'Submitting' });
+      axios
+        .put('http://165.22.100.70:8040/tim5/resetpassword', {
+            newPassword: password1,
+            resetPasswordLink: token,
+            
+        })
+        .then(res => {
+          console.log(password1, token)
+          console.log(res.data.message)
+            setFormData({
+              ...formData,
+               password1: '',
+              password2: ''
+            });
+            toast.success(res.data.message);
+          
+        })
+        .catch(err => {
+          toast.error('Something is wrong try again');
+        });
+    } else {
+      toast.error('Passwords don\'t matches');
     }
-}
+  };
+  return (
+    <div className='justify-center'>
+      <ToastContainer />
+      <div className='sm:rounded-lg flex justify-center flex-1'>
+        <div className='lg:w-1/2 xl:w-5/12 p-6 sm:p-12'>
+          <div className='mt-12 flex flex-col items-center'>
+            <h1 className='text-2xl xl:text-3xl font-extrabold'>
+              Reset Your Password
+            </h1>
+            <div className='w-full flex-1  text-indigo-500'>
+              
+              <form
+                className='mx-auto max-w-xs relative '
+                onSubmit={handleSubmit}
+              >
+                <input
+                  className='w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white'
+                  type='password'
+                  placeholder='password'
+                  onChange={handleChange('password1')}
+                  value={password1}
+                  />
+                  <input
+                  className='w-full mt-2 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white'
+                  type='password'
+                  placeholder='Confirm password'
+                  onChange={handleChange('password2')}
+                  value={password2}
+                />
+                <button
+                  style={{backgroundColor:"red"}}
+                  type='submit'
+                  className='mt-2 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
+                >
+                  <span className='ml-1'>Submit</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      ;
+    </div>
+  );
+};
+
+export default Reset;

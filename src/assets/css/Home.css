@@ -29,9 +29,9 @@
 }
   
 /* carousel */
-.readnext {
-    width: 181px!important;
-    height: 40px!important;
+.wreadnext {
+    width: 181px !important;
+    height: 40px !important;
 }
   
 .ccapt{
@@ -47,9 +47,9 @@
 }
   
 /* kategori donasi */
-.kat{
+.kat2{
     margin-top: 80px;
-    font-family: Poppins;
+    font-family: Poppins !important;
     font-style: normal;
     font-weight: bold;
     font-size: 34px;
@@ -173,4 +173,92 @@
     width: 1110px ;
     height: 432px;
     object-fit: contain;
+    margin-top: 93px;
+}
+
+.Wdana{
+    position: absolute;
+    width: 358.23px;
+    height: 32px;
+    top: 1430px;
+    left: 240px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    /* cream */
+    color: #FFFDD1;
+}
+
+.Wjumlahdana{
+    position: absolute;
+    width: 371.16px;
+    height: 80px;
+    left: 230px;
+    top: 1470px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 96px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    /* cream */
+
+    color: #FFFDD1;
+}
+
+.Wdonatur{
+    position: absolute;
+    width: 358.23px;
+    height: 32px;
+    top: 1600px;
+    left: 250px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    /* cream */
+
+    color: #FFFDD1;
+}
+
+.Wjumlahdonatur{
+    position: absolute;
+    width: 285.59px;
+    height: 80px;
+    left: 339px;
+    top: 1640px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 96px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+
+    /* cream */
+
+    color: #FFFDD1;
 }

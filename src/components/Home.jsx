@@ -13,8 +13,9 @@ import rasa from '../assets/images/rasa.png';
 import karsa from '../assets/images/karsa.png';
 import ilmu from '../assets/images/ilmu.png';
 
-import counter from '../assets/images/counterbanner.svg';
+// import counter from '../assets/images/counterbanner.svg';
 import readnext from '../assets/images/button.png';
+import Agregate from './Agregate';
 
 import Readnext from '../screens/News';
 import Readnext1 from '../screens/News2';
@@ -66,7 +67,7 @@ class Home extends React.Component{
                             <div className="carousel-caption d-none d-md-block ccapt">
                                 <p className="text-left">Makanan sehat adalah hak semua orang. Makan makanan sehat memberikan energi yang baik untuk tubuh. Energi baik mendorong lahirnya pikiran-pikiran baik dan perbuatan-perbuatan baik.</p>
                                 <br />
-                                <a href="/readnext"><img src={readnext} alt="readnext.jpg" className="readnext" /></a>
+                                <a href="/readnext"><img src={readnext} alt="readnext.jpg" className="wreadnext" /></a>
                             </div>
                         </div>
                         <div class="carousel-item" data-interval="2000">
@@ -75,7 +76,7 @@ class Home extends React.Component{
                                 <p className="text-left">PT. Super salurkan sembako ke masyarakat kelompok rentan sebanyak 1.000 paket sembako ke sejumlah wilayah di Yogyakarta.</p>
                                 <br />
                                 <br />
-                                <a href="/readnext1"><img src={readnext} alt="readnext.jpg" className="readnext"/></a>
+                                <a href="/readnext1"><img src={readnext} alt="readnext.jpg" className="wreadnext"/></a>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -84,7 +85,7 @@ class Home extends React.Component{
                                 <p className="text-left">Ramadan tahun ini jelas beda. Masa pandemi membuat semua lini kehidupan jadi lebih sulit dari biasanya. Termasuk efek kesulitan untuk mencukupi kebutuhannya.</p>
                                 <br />
                                 <br />
-                                <a href="/readnext2"><img src={readnext} alt="readnext.jpg" className="readnext"/></a>
+                                <a href="/readnext2"><img src={readnext} alt="readnext.jpg" className="wreadnext"/></a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +103,7 @@ class Home extends React.Component{
                     </Switch>  
                 </Router>
                 <div>
-                    <h3 className="dislplay-3 text-center kat">KATEGORI PROGRAM DONASI</h3>
+                    <h3 className="dislplay-3 text-center kat2">KATEGORI PROGRAM DONASI</h3>
                     <p className="text-center pkat">Temukan program donasi pilihamu  di berbagai kategori</p>
                 </div>
 
@@ -125,16 +126,11 @@ class Home extends React.Component{
                     
                 </div>
 
+                <Agregate />
                 <br />
                 <br />
                 <br />
 
-                <div>
-                    <img src={counter} alt="counter.svg" className="counter" />
-                </div>
-                <br />
-                <br />
-                <br />
 
                 <DonationContent {...this.props}></DonationContent>
                 <NewsContent data={landingPage.categories} />

@@ -6,6 +6,7 @@ import axios from 'axios';
 import { authenticate, isAuth } from '../helpers/auth';
 import { Link, Redirect } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
+import Register from './Register';
 
 
 
@@ -156,7 +157,7 @@ const Login = ({ history }) => {
                           </label>
                         </div>
                       <Link
-                        to='/users/password/forget'
+                        to='/password/forget'
                         className='col-6 text-right pr-0 forget-password'
                       >
                         Forget password?
@@ -166,26 +167,16 @@ const Login = ({ history }) => {
                 </form>
               
                 <div className="or text-center">
-                  <p className="ATAU my-4">ATAU</p>
+                  <p style={{position:"relative", right:"5px"}} className="ATAU my-4">ATAU</p>
                 </div>
 
                 <div className='flex flex-col '>
-                  <GoogleLogin
-                    clientId={`975168813576-b86dnkjbdji4cvctnj7esm0ogvj40v81.apps.googleusercontent.com`}
-                    onSuccess={responseGoogle}
-                    onFailure={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                    render={renderProps => (
-                  <button
-                    onClick={renderProps.onClick}
-                    disabled={renderProps.disabled}
-                    className='form-control Rectangle-1'
-                  >
-                    <i className='fab fa-google ' />
-                      <span className="">Masuk dengan Google</span>
-                  </button>
-                  )}
-                ></GoogleLogin>             
+                <a
+                      className='button-masuk mt-3'
+                      href='/register'
+                    >
+                      <span style={{position:"relative", left:"145px", top:"15px"}} className='ml-3 text-center text-masuk'>Daftar</span>
+                    </a>           
                 </div>
 
               </div>

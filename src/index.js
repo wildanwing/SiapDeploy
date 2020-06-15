@@ -42,12 +42,12 @@ import Description from './screens/Description';
 
 const Unnavbar = withRouter(({location}) => {
   return (
-    location.pathname !== '/login'  && location.pathname !== '/users/activate/:token' && location.pathname !== '/users/VerifSuccess' && location.pathname !== '/activation' && location.pathname !== '/register' && location.pathname !== '/password/forget' && location.pathname !== '/password/forgetsuccess' ? <Navbar/> : null
+    location.pathname !== '/login'  && location.pathname !== '/users/activate/:{{token}}' && location.pathname !== '/activation' && location.pathname !== '/register' && location.pathname !== '/password/forget' && location.pathname !== '/password/forgetsuccess' ? <Navbar/> : null
   )
 }) 
 const Unfooter = withRouter(({location}) => {
   return (
-    location.pathname !== '/login' && location.pathname !== '/users/activate/:token'  && location.pathname !== '/activation' && location.pathname !== '/register' && location.pathname !== '/password/forget' && location.pathname !== '/password/forgetsuccess' ? <Footer/> : null
+    location.pathname !== '/login' && location.pathname !== '/users/activate/{{:token}}'  && location.pathname !== '/activation' && location.pathname !== '/register' && location.pathname !== '/password/forget' && location.pathname !== '/password/forgetsuccess' ? <Footer/> : null
   )
 }) 
 
@@ -60,7 +60,7 @@ ReactDOM.render(
       <Route exact path="/" render={props => <Home {...props} />} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/about' component={About} />
-      <Route exact path='/Donasi' component={Donasi} />
+      <Route exact path='/donasi' component={Donasi} />
       <Route exact path='/news' component={News2} />   
 
       <Route exact path='/readnext' component={Readnext} />
@@ -77,12 +77,12 @@ ReactDOM.render(
       <Route path='/users/activate/:token' exact render={props => <Activate {...props} />} /> 
       <Route path='/users/Donasi' exact render={props => <NewsPage {...props} />} />
       <Route path='/NewsPage' exact render={props => <NewsPage {...props} />} />
-      <Route path='/ProgramDonasi/Description' exact render={props => <Description {...props} />} /> 
-      <Route path='/ProgramDonasi/UpdateActivity' exact render={props => <UpdateActivity {...props} />} />
-      <Route path='/ProgramDonasi/UpdateDonasi' exact render={props => <UpdateDonasi {...props} />} /> 
+      <Route path='/donasi/Description' exact render={props => <Description {...props} />} /> 
+      <Route path='/donasi/UpdateActivity' exact render={props => <UpdateActivity {...props} />} />
+      <Route path='/donasi/UpdateDonasi' exact render={props => <UpdateDonasi {...props} />} /> 
       <Route path='/Profile/HistoryDonation' exact render={props => <HistoryDOnation {...props} />} />
-      <Route path='/Profile/EditProfile' exact render={props => <EditProfil {...props} />} />   
-      <Route path='/Profile/Reset' exact render={props => <Reset {...props} />} />
+      <Route path='/Profile/profile' exact render={props => <EditProfil {...props} />} />
+      <Route path='/users/password/reset/:token' exact render={props => <Reset {...props} />} />
       <PrivateRoute path="/users/" exact component={Private} />
        <AdminRoute path="/admin" exact component={Admin} />
       <Redirect to='/' />
