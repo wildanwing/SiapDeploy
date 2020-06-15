@@ -1,0 +1,70 @@
+.newsheader{
+    width: 996px;
+    height: 115px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 155.8%;
+    /* or 56px */
+
+    text-align: center;
+    text-transform: capitalize;
+
+    margin: auto;
+    margin-top: 80px;
+
+    /* warna tulisan */
+
+    color: #3C3C3C;
+}
+
+.newsdate{
+    width: 180px;
+    height: 21px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+
+    margin: auto;
+    margin-top: 32px;
+    /* warna tulisan */
+
+    color: #3C3C3C;
+}
+
+.newsimg{
+    width: max-content;
+    margin: 32px 0px;
+}
+
+.newscapt{
+    width: 1000px;
+    height: 879px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 35px;
+    /* or 194% */
+
+    text-align: justify;
+    margin: auto;
+    /* warna tulisan */
+
+    color: #3C3C3C;
+}
+
+.newsimg2{
+    width: 1000px;
+    height: 448px;
+
+    margin: auto;
+    margin-top: 64px;
+}
